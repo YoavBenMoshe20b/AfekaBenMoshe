@@ -1,6 +1,6 @@
 /* הגדרות כלליות */
 body {
-    font-family: Arial, sans-serif; /* פונט בסיסי */
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
@@ -11,56 +11,58 @@ body {
 /* הקופסה הראשית */
 .container {
     background-color: #ffffff;
-    width: 90%; /* רוחב יחסי */
-    margin: 0 auto; /* מרכוז הקופסה */
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #cccccc; /* גבול פשוט */
+    border: 1px solid #cccccc;
 }
 
-h1 {
+/* כותרות - שימוש ב-CLASS במקום תגית */
+.header h1 {
     color: #333333;
 }
 
-h3 {
+.header h3 {
     color: #666666;
     font-weight: normal;
 }
 
-/* מסגרת לתמונה עם גלילה - פתרון טכני ללא JS */
-.map-scroll-container {
+/* מסגרת לתמונה עם גלילה */
+.map-container {
     width: 100%;
-    overflow: auto; /* מאפשר גלילה אם התמונה גדולה מדי */
+    overflow: auto; /* מאפשר גלילה אם המסך צר מדי */
     border: 1px solid #ddd;
     margin-bottom: 20px;
 }
 
 /* התמונה עצמה */
-.map-scroll-container img {
+.map-container img {
     display: block;
     margin: 0 auto;
-    /* חשוב: לא מגבילים רוחב כדי שהקואורדינטות לא ישברו */
+    border: 0;
 }
 
-/* תפריט ניווט - שיטה קלאסית (ללא Flexbox) */
-nav {
+/* תפריט ניווט - ללא תגיות חדשות */
+.nav {
     margin-top: 20px;
     padding: 10px;
     background-color: #e9e9e9;
-    border-radius: 10px; /* נלמד ב-CSS3 */
+    border-radius: 10px; /* מותר לפי CSS3 שנלמד */
 }
 
-nav ul {
-    list-style-type: none; /* ביטול נקודות הרשימה */
+.nav ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-nav li {
-    display: inline-block; /* הצגה בשורה אחת */
+.nav li {
+    display: inline-block; /* שיטה קלאסית לתפריט אופקי */
     margin: 5px 10px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
@@ -68,12 +70,12 @@ nav a {
     padding: 5px 10px;
 }
 
-nav a:hover {
+.nav a:hover {
     color: #0000ff;
     text-decoration: underline;
 }
 
-/* עיצוב לדפים הפנימיים - טבלה ופריסה */
+/* עיצוב לדפים הפנימיים - טבלה */
 .layout-table {
     width: 100%;
     border: 0;
@@ -92,11 +94,11 @@ nav a:hover {
     padding: 5px;
 }
 
-/* כפתור קישור חיצוני */
+/* כפתורים */
 .external-link-btn {
     display: inline-block;
     margin-top: 15px;
-    background-color: #4CAF50; /* ירוק */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -118,7 +120,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-footer {
+.footer {
     margin-top: 30px;
     border-top: 1px solid #eee;
     padding-top: 10px;
